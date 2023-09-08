@@ -26,14 +26,14 @@ export default function NavBar() {
     <NavigationContainer>
       <Navigator
         screenOptions={{
-          tabBarActiveTintColor: '#ffa300',
+          tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'black',
           tabBarStyle: {
-            backgroundColor: '#007C7D',
+            backgroundColor: '#007AFF',
           },
-          headerTintColor: '#ffa300',
+          headerTintColor: 'white',
           headerStyle: {
-            backgroundColor: '#007C7D',
+            backgroundColor: '#007AFF',
           },
           headerTitleStyle: {
             fontSize: 32,

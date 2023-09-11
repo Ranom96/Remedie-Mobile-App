@@ -7,19 +7,9 @@ import { View, Image, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
+import ConsultasCadastrar from '../screens/ConsultasCadastrar';
 
 const { Navigator, Screen } = createBottomTabNavigator();
-
-// const CustomHeaderTitle = () => (
-//   <View style={{ flexDirection: 'row', alignItems: 'center', textAlign:'center' }}>
-//     <Image
-//       //source={require('../assets/Remedie-2.svg')}
-//       style={{  width: 32, height: 32 }}
-//     />
-//     <Text style={{ fontSize: 24, color: '#ffa300', textAlign:'center' }}>Remedie</Text>
-//   </View>
-// );
-
 
 export default function NavBar() {
   return (
@@ -62,7 +52,7 @@ export default function NavBar() {
         />
         <Screen
           name="Consultas"
-          component={Consultas}
+          component={ConsultasCadastrar}
           options={{
             tabBarIcon: ({ size, color }) => (
               <Feather name="calendar" size={size} color={color} />

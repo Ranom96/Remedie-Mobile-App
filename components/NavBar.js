@@ -26,6 +26,7 @@ export default function NavBar() {
     <NavigationContainer>
       <Navigator
         screenOptions={{
+          headerShown: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'black',
           tabBarStyle: {
@@ -51,7 +52,7 @@ export default function NavBar() {
           }}
         />
         <Screen
-          name="Remedios"
+          name="Remédios"
           component={Remedios}
           options={{
             tabBarIcon: ({ size, color }) => (

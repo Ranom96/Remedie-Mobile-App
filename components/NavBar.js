@@ -5,7 +5,7 @@ import Exames from '../screens/Exames';
 import { View, Image, Text } from 'react-native';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHouseMedical, faLaptopMedical, faNotesMedical, faPills, faPrescriptionBottleMedical, faStethoscope } from '@fortawesome/free-solid-svg-icons';
+import { faHouseMedical, faNotesMedical, faPrescriptionBottleMedical, faStethoscope } from '@fortawesome/free-solid-svg-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';

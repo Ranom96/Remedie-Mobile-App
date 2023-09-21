@@ -15,7 +15,7 @@ export default function DateInput(props) {
 
     const labelStyle = {
         marginHorizontal: 24,
-        marginTop: 24,
+        marginTop: 8,
         color: '#007AFF'
     }
 

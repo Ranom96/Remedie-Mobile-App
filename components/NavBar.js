@@ -11,6 +11,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
 import ConsultasCadastrar from '../screens/ConsultasCadastrar';
 
+
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export default function NavBar() {
@@ -54,7 +55,7 @@ export default function NavBar() {
         />
         <Screen
           name="Consultas"
-          component={ConsultasCadastrar}
+          component={Consultas}
           options={{
             tabBarIcon: ({ size, color }) => (
               <FontAwesomeIcon icon={faNotesMedical} size={size} color={color} />

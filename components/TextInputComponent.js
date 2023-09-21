@@ -12,7 +12,7 @@ export default function TextInputComponent(props) {
 
     const labelStyle = {
         marginHorizontal: 24,
-        marginTop: 24,
+        marginTop: 16,
         color: '#007AFF'
     }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, Text, Modal, TouchableWithoutFeedback, View } from 'react-native';
 import CheckBox from 'react-native-checkbox';
 
 export default function ExibirConsultas(props) {

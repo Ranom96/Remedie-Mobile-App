@@ -1,7 +1,10 @@
 import * as React from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { SafeAreaView, Text, ScrollView, View  } from 'react-native'
 import Header from '../components/Header'
 import TextInputComponent from '../components/TextInputComponent'
+import BotaoAdicionarImagem from '../components/BotaoAdicionarImagem'
+import TimeInput from '../components/TimeInput'
+import BotaoCancelarSalvar from '../components/BotaoCancelarSalvar'
 
 export default function RemediosCadastrar(props) {
   const TextStyle = {

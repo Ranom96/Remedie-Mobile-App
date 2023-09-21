@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
 import ConsultasCadastrar from '../screens/ConsultasCadastrar';
+import RemediosCadastrar from '../screens/RemediosCadastrar'
 
 
 const { Navigator, Screen } = createBottomTabNavigator();

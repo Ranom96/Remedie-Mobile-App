@@ -35,7 +35,7 @@ export default function Consultas(props) {
   return (
     <>
       <Header title='Consultas' />
-      <Text style={TextStyle}>Essa são suas consultas</Text>
+      <Text style={TextStyle}>Estas são suas consultas</Text>
       <SafeAreaView style={{ flex: 1, alignItems: 'center', marginTop: 24 }}>
         <ExibirConsultas especialidade={simulacaoBackend.especialidade} data={simulacaoBackend.data} horario={simulacaoBackend.horario} clinica={simulacaoBackend.clinica}/>
         <ExibirConsultas especialidade={simulacaoBackend.especialidade2} data={simulacaoBackend.data2} horario={simulacaoBackend.horario2} clinica={simulacaoBackend.clinica}/>

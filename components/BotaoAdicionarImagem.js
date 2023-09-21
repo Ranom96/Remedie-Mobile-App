@@ -1,21 +1,25 @@
 import { Button } from 'react-native-paper';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import TextInputComponent from './TextInputComponent';
 
 export default function BotaoAdicionarImagem(props) {
 
     return (
-        <Button
-            style={{
-                backgroundColor: '#79747E',
-                borderRadius: 24,
-                position: 'absolute',
-                bottom: 400,
-                
-            }}
-            onPress={() => {}}
-        >
-            <Text >+ Adicionar Imagem</Text>
-        </Button>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Button
+                style={{
+                    backgroundColor: '#007AFF',
+                    borderRadius: 24,
+                    width: 200,
+                    height: 60,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: 32
+                }}
+                onPress={() => { }}
+            >
+                <Text style={{ color: 'white' }}>+ Adicionar Imagem</Text>
+            </Button>
+        </View>
     );
 }

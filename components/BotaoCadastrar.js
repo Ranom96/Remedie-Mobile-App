@@ -13,7 +13,7 @@ export default function BotaoCadastrar(props) {
             }}
             onPress={() => {}}
         >
-            <Text style={{ color: 'white' }}>+</Text>
+            <Text style={{ color: 'white', fontSize:24, }}>+</Text>
         </Button>
     );
 }

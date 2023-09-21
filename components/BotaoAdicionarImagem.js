@@ -18,7 +18,7 @@ export default function BotaoAdicionarImagem(props) {
                 }}
                 onPress={() => { }}
             >
-                <Text style={{ color: 'white' }}>+ Adicionar Imagem</Text>
+                <Text style={{ color: 'white', fontSize: 12, }}>+ Adicionar Imagem</Text>
             </Button>
         </View>
     );

@@ -113,12 +113,12 @@ export default function TimeInput(props) {
         borderWidth: 1,
         borderColor: '#007AFF',
         borderRadius: 10,
-        maxWidth: 100,
+        maxWidth: 120,
     };
 
     return (
         <>
-            <Text style={{ marginTop: 40, marginBottom: 16, marginLeft: 72, color: 'grey' }}>{label}</Text>
+            <Text style={{ marginTop: 40, marginBottom: 16, marginLeft: 88, color: 'grey' }}>{label}</Text>
             <SafeAreaView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                 <View style={pickerContainerStyle}>
                     <Picker
@@ -144,7 +144,7 @@ export default function TimeInput(props) {
                     </Picker>
                 </View>
             </SafeAreaView>
-            <Text style={{marginLeft: 72, color: 'grey', marginBottom: 24, marginTop: 8 }}>Hora                           Minuto</Text>
+            <Text style={{marginLeft: 88, color: 'grey', marginBottom: 24, marginTop: 8 }}>Hora                                Minuto</Text>
         </>
 
 

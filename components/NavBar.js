@@ -14,6 +14,7 @@ import {
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import RegisterUser from "../screens/RegisterUser/RegisterUser";
+import ForgotPassword from "../screens/ForgotPassword/ForgotPassword";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -84,7 +85,7 @@ export default function NavBar() {
         component={Login}
         options={{
           headerShown: true,
-          // tabBarItemStyle: { display: "none" },
+          tabBarItemStyle: { display: "none" },
         }}
       />
       <Screen
@@ -92,7 +93,16 @@ export default function NavBar() {
         component={RegisterUser}
         options={{
           headerShown: true,
-          // tabBarItemStyle: { display: "none" },
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+
+      <Screen
+        name="ForgotPassword"
+        component={ForgotPassword}
+        options={{
+          headerShown: true,
+          tabBarItemStyle: { display: "none" },
         }}
       />
     </Navigator>

@@ -38,12 +38,14 @@ const Login = ({ navigation, logar }) => {
         value={password}
         onChangeText={(text) => setPassword(text)}
       />
-      <Text
-        style={[styles.passResetColor, styles.textSpacer]}
-        variant="titleSmall"
-      >
-        Esqueci minha senha
-      </Text>
+      <TouchableOpacity onPress={() => navigation.navigate("ForgotPassword")}>
+        <Text
+          style={[styles.passResetColor, styles.textSpacer]}
+          variant="titleSmall"
+        >
+          Esqueci minha senha
+        </Text>
+      </TouchableOpacity>
       <Button style={styles.buttonStyle} mode="contained" onPress={handleLogin}>
         Entrar
       </Button>

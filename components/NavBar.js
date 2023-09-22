@@ -18,15 +18,14 @@ import { StatusBar } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import ConsultasCadastrar from "../screens/ConsultasCadastrar";
 import RemediosCadastrar from "../screens/RemediosCadastrar";
+import RegisterUser from "../screens/RegisterUser/RegisterUser";
 
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export default function NavBar() {
   return (
-    <>
-    <StatusBar backgroundColor="#007AFF" barStyle="light-content" />
-    <NavigationContainer>
+s    <NavigationContainer>
       <Navigator
         screenOptions={{
           headerShown: false,
@@ -96,6 +95,5 @@ export default function NavBar() {
         />
       </Navigator>
     </NavigationContainer>
-    </>
   );
 }

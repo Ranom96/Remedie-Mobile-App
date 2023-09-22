@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native";
 import TextInputComponent from "../../components/TextInputComponent";
 import { StyleSheet, View } from "react-native";
 import { Button, Checkbox, Text, TextInput } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
 const Login = (props) => {
   const [login, setLogin] = useState("");
@@ -14,12 +15,20 @@ const Login = (props) => {
         Bem vindo ao Remedie
       </Text>
       <TextInput
+        mode="outlined"
+        outlineStyle={{ backgroundColor: "transparent" }}
+        outlineColor="#005AFF"
+        activeOutlineColor="#005AFF"
         style={styles.textSpacer}
         label={"Login"}
         value={login}
         onChangeText={(text) => setLogin(text)}
       />
       <TextInput
+        mode="outlined"
+        outlineStyle={{ backgroundColor: "transparent" }}
+        outlineColor="#005AFF"
+        activeOutlineColor="#005AFF"
         style={styles.textSpacer}
         label={"Senha"}
         value={password}
@@ -31,11 +40,7 @@ const Login = (props) => {
       >
         Esqueci minha senha
       </Text>
-      <Button
-        style={styles.buttonMargin}
-        mode="contained"
-        onPress={props.logar}
-      >
+      <Button style={styles.buttonStyle} mode="contained" onPress={props.logar}>
         Entrar
       </Button>
       <Text
@@ -65,7 +70,7 @@ const styles = StyleSheet.create({
   textSpacer: {
     marginTop: 20,
   },
-  buttonMargin: {
+  buttonStyle: {
     marginTop: 20,
     marginStart: 30,
     marginEnd: 30,

@@ -3,7 +3,6 @@ import Remedios from "../screens/Remedios";
 import Consultas from "../screens/Consultas";
 import Exames from "../screens/Exames";
 import Login from "../screens/Login/Login";
-import { View, Image, Text } from "react-native";
 
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
@@ -13,11 +12,7 @@ import {
   faStethoscope,
 } from "@fortawesome/free-solid-svg-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar } from "react-native";
-import { Feather } from "@expo/vector-icons";
-import ConsultasCadastrar from "../screens/ConsultasCadastrar";
-import RemediosCadastrar from "../screens/RemediosCadastrar";
+
 import RegisterUser from "../screens/RegisterUser/RegisterUser";
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -25,6 +20,7 @@ const { Navigator, Screen } = createBottomTabNavigator();
 export default function NavBar() {
   return (
     <Navigator
+      initialRouteName="Login"
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "white",

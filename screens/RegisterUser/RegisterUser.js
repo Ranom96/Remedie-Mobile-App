@@ -2,9 +2,6 @@ import { useState } from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
 import { Button, Text, TextInput } from "react-native-paper";
 
-import Login from "../Login/Login";
-import Header from "../../components/Header";
-
 const RegisterUser = ({ navigation }) => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -60,7 +57,7 @@ const RegisterUser = ({ navigation }) => {
       <Button
         style={styles.buttonStyle}
         mode="contained"
-        onPress={navigation.navigate("Login")}
+        onPress={() => navigation.navigate("Login")}
       >
         Cadastrar
       </Button>

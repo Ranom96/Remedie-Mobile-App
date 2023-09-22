@@ -1,13 +1,17 @@
 import { useState } from "react";
-import { SafeAreaView } from "react-native";
-import TextInputComponent from "../../components/TextInputComponent";
-import { StyleSheet, View } from "react-native";
-import { Button, Checkbox, Text, TextInput } from "react-native-paper";
+import { SafeAreaView, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
+import { Button, Text, TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
-const Login = (props) => {
+const Login = ({ navigation, logar }) => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    logar;
+    navigation.navigate("Home");
+  };
 
   return (
     <SafeAreaView style={styles.containerStyle}>
@@ -40,7 +44,7 @@ const Login = (props) => {
       >
         Esqueci minha senha
       </Text>
-      <Button style={styles.buttonStyle} mode="contained" onPress={props.logar}>
+      <Button style={styles.buttonStyle} mode="contained" onPress={handleLogin}>
         Entrar
       </Button>
       <Text
@@ -49,13 +53,18 @@ const Login = (props) => {
       >
         Ainda não tem uma conta?
       </Text>
-      <Text
-        style={[styles.createAccount, styles.actionText]}
-        variant="titleSmall"
-        onPress={() => {}}
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Register");
+        }}
       >
-        Criar conta
-      </Text>
+        <Text
+          style={[styles.createAccount, styles.actionText]}
+          variant="titleSmall"
+        >
+          Criar conta
+        </Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };

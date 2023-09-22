@@ -2,6 +2,7 @@ import Home from "../screens/Home";
 import Remedios from "../screens/Remedios";
 import Consultas from "../screens/Consultas";
 import Exames from "../screens/Exames";
+import Login from "../screens/Login/Login";
 import { View, Image, Text } from "react-native";
 
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";

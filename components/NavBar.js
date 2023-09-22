@@ -14,86 +14,91 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar } from 'react-native';
+import { StatusBar } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import ConsultasCadastrar from "../screens/ConsultasCadastrar";
 import RemediosCadastrar from "../screens/RemediosCadastrar";
 import RegisterUser from "../screens/RegisterUser/RegisterUser";
 
-
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export default function NavBar() {
   return (
-s    <NavigationContainer>
-      <Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarActiveTintColor: "white",
-          tabBarInactiveTintColor: "black",
-          tabBarStyle: {
-            backgroundColor: "#007AFF",
-          },
-          headerTintColor: "white",
-          headerStyle: {
-            backgroundColor: "#007AFF",
-          },
-          headerTitleStyle: {
-            fontSize: 32,
-          },
-          headerTitle: (title = "Remedie"),
-          headerTitleAlign: "center",
+    <Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: "white",
+        tabBarInactiveTintColor: "black",
+        tabBarStyle: {
+          backgroundColor: "#007AFF",
+        },
+        headerTintColor: "white",
+        headerStyle: {
+          backgroundColor: "#007AFF",
+        },
+        headerTitleStyle: {
+          fontSize: 32,
+        },
+        headerTitle: (title = "Remedie"),
+        headerTitleAlign: "center",
+      }}
+    >
+      <Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <FontAwesomeIcon icon={faHouseMedical} size={size} color={color} />
+          ),
         }}
-      >
-        <Screen
-          name="Home"
-          component={Home}
-          options={{
-            tabBarIcon: ({ size, color }) => (
-              <FontAwesomeIcon
-                icon={faHouseMedical}
-                size={size}
-                color={color}
-              />
-            ),
-          }}
-        />
-        <Screen
-          name="Remédios"
-          component={Remedios}
-          options={{
-            tabBarIcon: ({ size, color }) => (
-              <FontAwesomeIcon
-                icon={faPrescriptionBottleMedical}
-                size={size}
-                color={color}
-              />
-            ),
-          }}
-        />
-        <Screen
-          name="Consultas"
-          component={Consultas}
-          options={{
-            tabBarIcon: ({ size, color }) => (
-              <FontAwesomeIcon
-                icon={faNotesMedical}
-                size={size}
-                color={color}
-              />
-            ),
-          }}
-        />
-        <Screen
-          name="Exames"
-          component={Exames}
-          options={{
-            tabBarIcon: ({ size, color }) => (
-              <FontAwesomeIcon icon={faStethoscope} size={size} color={color} />
-            ),
-          }}
-        />
-      </Navigator>
-    </NavigationContainer>
+      />
+      <Screen
+        name="Remédios"
+        component={Remedios}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <FontAwesomeIcon
+              icon={faPrescriptionBottleMedical}
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Screen
+        name="Consultas"
+        component={Consultas}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <FontAwesomeIcon icon={faNotesMedical} size={size} color={color} />
+          ),
+        }}
+      />
+      <Screen
+        name="Exames"
+        component={Exames}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <FontAwesomeIcon icon={faStethoscope} size={size} color={color} />
+          ),
+        }}
+      />
+      <Screen
+        name="Login"
+        component={Login}
+        options={{
+          headerShown: true,
+          // tabBarItemStyle: { display: "none" },
+        }}
+      />
+      <Screen
+        name="Register"
+        component={RegisterUser}
+        options={{
+          headerShown: true,
+          // tabBarItemStyle: { display: "none" },
+        }}
+      />
+    </Navigator>
   );
 }

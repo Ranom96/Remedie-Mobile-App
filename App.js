@@ -27,6 +27,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
+      <StatusBar backgroundColor="#007AFF" barStyle="light-content" />
       {showSplash ? (
         <SplashScreen />
       ) : logado ? (

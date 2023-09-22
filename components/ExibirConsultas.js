@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { SafeAreaView, Text, Modal, TouchableWithoutFeedback, View } from 'react-native';
+import { SafeAreaView, Text, Modal, TouchableWithoutFeedback, View, onPress } from 'react-native';
 import CheckBox from 'react-native-checkbox';
+import { Button } from 'react-native-paper'
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function ExibirConsultas(props) {
     const [isChecked, setIsChecked] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
-    const especialidade = props.especialidade
-    const data = props.data
-    const horario = props.horario
-    const clinica = props.clinica
+    const dado1 = props.dado1
+    const dado2 = props.dado2
+    const dado3 = props.dado3
+    const dado4 = props.dado4
 
     const exibirStyle = {
         flex: 1,
@@ -35,23 +40,48 @@ export default function ExibirConsultas(props) {
         marginLeft: 16,
     }
 
+    const showModal = () => {
+        setIsVisible(true);
+    };
+
+    const hideModal = () => {
+        setIsVisible(false);
+    };
+
     return (
         <SafeAreaView style={exibirStyle}>
+
             <CheckBox
                 style={checkboxStyle}
                 label=""
                 checked={isChecked}
                 onChange={() => setIsChecked(!isChecked)}
             />
-            <SafeAreaView style={{flexDirection: 'column'}}>
-                <Text style={TextStyle}>{props.especialidade}</Text>
-                <SafeAreaView style={{flexDirection: 'row'}}>
-                <Text style={TextStyle}>{props.data}</Text>
-                <Text style={TextStyle}>{props.horario}</Text>         
+            <SafeAreaView style={{ flexDirection: 'column' }}>
+                <Text style={TextStyle}>{props.dado1}</Text>
+                <SafeAreaView style={{ flexDirection: 'row' }}>
+                    <Text style={TextStyle}>{props.dado2}</Text>
+                    <Text style={TextStyle}>{props.dado3}</Text>
+                    <TouchableWithoutFeedback onPress={showModal}>
+                        <View>
+                            <FontAwesomeIcon icon={faPenToSquare} style={{marginLeft: 24, color: '#545454'}} size={24} />
+                        </View>
+                    </TouchableWithoutFeedback>
                 </SafeAreaView>
-                <Text style={TextStyle}>{props.clinica}</Text>
+                <Text style={TextStyle}>{props.dado4}</Text>
             </SafeAreaView>
 
+            <Modal visible={isVisible} animationType="slide" transparent={true}>
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                    <View style={{ backgroundColor: 'white', padding: 20, paddingRight: 40, borderRadius: 10, flexDirection: 'row' }}>
+                        <Button color='red' onPress={() => {}}>Remover</Button>
+                        <Button color='#007AFF' onPress={() => {}}>Editar</Button>
+                        <TouchableWithoutFeedback onPress={hideModal}>
+                            <Text style={{marginLeft: 16, fontSize: 24}}>X</Text>
+                        </TouchableWithoutFeedback>
+                    </View>
+                </View>
+            </Modal>
 
         </SafeAreaView>
     );

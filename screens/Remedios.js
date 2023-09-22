@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SafeAreaView, Text } from 'react-native'
 import Header from '../components/Header'
-import ExibirRemedios from '../components/ExibirRemedios';
+import ExibirConsultas from '../components/ExibirConsultas';
 import BotaoCadastrar from '../components/BotaoCadastrar';
 
 
@@ -21,9 +21,8 @@ export default function Remedios(props) {
 
   const simulacaoBackend = {
     nomeRemedio: 'Dipirona',
-    data: '27/10/2023',
     horario: '14h30',
-    dosagem: '1 comprimido a cada 6h',
+    dosagem: '1 comprimido',
     nomeRemedio2: 'Nimesulida',
     horario2: '12h45',
 };
@@ -34,8 +33,8 @@ export default function Remedios(props) {
       <Header title='Remédios' />
       <Text style={TextStyle}>Remédios do dia</Text>
       <SafeAreaView style={{ flex: 1, alignItems: 'center', marginTop: 24 }}>
-        <ExibirRemedios nomeRemedio={simulacaoBackend.nomeRemedio} data={simulacaoBackend.data} horario={simulacaoBackend.horario} dosagem={simulacaoBackend.dosagem}/>
-        <ExibirRemedios nomeRemedio={simulacaoBackend.nomeRemedio2} data={simulacaoBackend.data} horario={simulacaoBackend.horario2} dosagem={simulacaoBackend.dosagem}/>
+        <ExibirConsultas dado1={simulacaoBackend.nomeRemedio} dado2={simulacaoBackend.horario} dado3={simulacaoBackend.dosagem} />
+        <ExibirConsultas dado1={simulacaoBackend.nomeRemedio2} dado2={simulacaoBackend.horario2} dado3={simulacaoBackend.dosagem} />
         <BotaoCadastrar />
       </SafeAreaView>
     </>

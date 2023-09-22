@@ -37,8 +37,8 @@ export default function Consultas(props) {
       <Header title='Consultas' />
       <Text style={TextStyle}>Estas são suas consultas</Text>
       <SafeAreaView style={{ flex: 1, alignItems: 'center', marginTop: 24 }}>
-        <ExibirConsultas especialidade={simulacaoBackend.especialidade} data={simulacaoBackend.data} horario={simulacaoBackend.horario} clinica={simulacaoBackend.clinica}/>
-        <ExibirConsultas especialidade={simulacaoBackend.especialidade2} data={simulacaoBackend.data2} horario={simulacaoBackend.horario2} clinica={simulacaoBackend.clinica}/>
+        <ExibirConsultas dado1={simulacaoBackend.especialidade} dado2={simulacaoBackend.data} dado3={simulacaoBackend.horario} dado4={simulacaoBackend.clinica}/>
+        <ExibirConsultas dado1={simulacaoBackend.especialidade2} dado2={simulacaoBackend.data2} dado3={simulacaoBackend.horario2} dado4={simulacaoBackend.clinica}/>
         <BotaoCadastrar />
       </SafeAreaView>
     </>

@@ -24,7 +24,7 @@ export default function RemediosCadastrar(props) {
         <TextInputComponent label="Medicamento" descricao='Insira o nome do remédio' placeholder='Nome' />
         <TextInputComponent label="Dosagem" descricao='Qual é a dosagem? Ex: 1 dose = 2 capsulas' placeholder='Nome' />
         <BotaoAdicionarImagem/>
-        <TimeInput label="Horário da consulta" />
+        <TimeInput label="Horário do remédio" />
         <BotaoCancelarSalvar />
         <View style={{ marginBottom: 100 }} /> 
       </ScrollView>

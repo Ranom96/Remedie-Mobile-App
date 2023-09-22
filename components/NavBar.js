@@ -14,14 +14,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import ConsultasCadastrar from "../screens/ConsultasCadastrar";
 import RemediosCadastrar from "../screens/RemediosCadastrar";
+
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export default function NavBar() {
   return (
+    <>
+    <StatusBar backgroundColor="#007AFF" barStyle="light-content" />
     <NavigationContainer>
       <Navigator
         screenOptions={{
@@ -92,5 +96,6 @@ export default function NavBar() {
         />
       </Navigator>
     </NavigationContainer>
+    </>
   );
 }

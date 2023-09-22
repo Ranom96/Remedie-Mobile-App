@@ -8,8 +8,10 @@ export default function BotaoAdicionarImagem(props) {
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Button
                 style={{
-                    backgroundColor: '#007AFF',
-                    borderRadius: 24,
+                    backgroundColor: 'white',
+                    borderRadius: 28,
+                    borderWidth: 1,
+                    borderColor:'#79747E',
                     width: 200,
                     height: 60,
                     justifyContent: 'center',
@@ -18,7 +20,7 @@ export default function BotaoAdicionarImagem(props) {
                 }}
                 onPress={() => { }}
             >
-                <Text style={{ color: 'white', fontSize: 12, }}>+ Adicionar Imagem</Text>
+                <Text style={{ color: '#6750A4', fontSize: 12, }}>+ Adicionar Imagem</Text>
             </Button>
         </View>
     );

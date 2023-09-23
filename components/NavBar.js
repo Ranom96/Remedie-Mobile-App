@@ -86,6 +86,7 @@ export default function NavBar() {
         options={{
           headerShown: true,
           tabBarItemStyle: { display: "none" },
+          tabBarStyle: { display: "none" },
         }}
       />
       <Screen
@@ -94,6 +95,7 @@ export default function NavBar() {
         options={{
           headerShown: true,
           tabBarItemStyle: { display: "none" },
+          tabBarStyle: { display: "none" },
         }}
       />
 
@@ -103,6 +105,7 @@ export default function NavBar() {
         options={{
           headerShown: true,
           tabBarItemStyle: { display: "none" },
+          tabBarStyle: { display: "none" },
         }}
       />
     </Navigator>

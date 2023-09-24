@@ -6,7 +6,7 @@ import BotaoCadastrar from "../components/BotaoCadastrar";
 import { useState, useEffect } from "react";
 import ExibirConsultas from "../components/ExibirConsultas";
 
-export default function Consultas(props) {
+export default function Consultas({props, navigation}) {
   const onCadastrar = () => {
     props.onPress();
   };
@@ -18,6 +18,13 @@ export default function Consultas(props) {
     marginHorizontal: 24,
     paddingTop: 16,
   };
+
+  const botaoStyle = {
+    backgroundColor: '#007AFF',
+    borderRadius: 24,
+    position: 'absolute',
+    bottom: 16,
+  }
 
   const simulacaoBackend = {
     especialidade: "Cardiologista",
@@ -46,7 +53,9 @@ export default function Consultas(props) {
           dado3={simulacaoBackend.horario2}
           dado4={simulacaoBackend.clinica}
         />
-        <BotaoCadastrar />
+        <Button style={botaoStyle} onPress={() => navigation.navigate("ConsultasCadastrar")}>
+            <Text style={{ color: 'white', fontSize: 24, paddingTop: 8 }}>+</Text>
+        </Button>
       </SafeAreaView>
     </>
   );

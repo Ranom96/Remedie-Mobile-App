@@ -3,6 +3,8 @@ import Remedios from "../screens/Remedios";
 import Consultas from "../screens/Consultas";
 import Exames from "../screens/Exames";
 import Login from "../screens/Login/Login";
+import ConsultasCadastrar from "../screens/ConsultasCadastrar";
+import RemediosCadastrar from '../screens/RemediosCadastrar'
 
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
@@ -104,6 +106,24 @@ export default function NavBar() {
         component={ForgotPassword}
         options={{
           headerShown: true,
+          tabBarItemStyle: { display: "none" },
+          tabBarStyle: { display: "none" },
+        }}
+      />
+      <Screen
+        name="ConsultasCadastrar"
+        component={ConsultasCadastrar}
+        options={{
+          headerShown: false,
+          tabBarItemStyle: { display: "none" },
+          tabBarStyle: { display: "none" },
+        }}
+      />
+      <Screen
+        name="RemediosCadastrar"
+        component={RemediosCadastrar}
+        options={{
+          headerShown: false,
           tabBarItemStyle: { display: "none" },
           tabBarStyle: { display: "none" },
         }}

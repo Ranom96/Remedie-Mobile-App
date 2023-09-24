@@ -1,16 +1,16 @@
-import * as React from 'react'
+import { React, useRef,  useEffect } from 'react'
 import { View, SafeAreaView, Text, ScrollView } from 'react-native'
 import { Button } from 'react-native-paper'
 import Header from '../components/Header'
 import DateInput from '../components/DateInput'
 import TextInputComponent from '../components/TextInputComponent'
 import TimeInput from '../components/TimeInput'
-import BotaoCancelarSalvar from '../components/BotaoCancelarSalvar'
 
 
 
 
-export default function ConsultasCadastrar(props) {
+
+export default function ConsultasCadastrar({props, navigation}) {
   const TextStyle = {
     fontSize: 32,
     textAlign: 'center',
@@ -30,7 +30,10 @@ export default function ConsultasCadastrar(props) {
         <TextInputComponent label="Médico" descricao='Insira o nome do seu médico' placeholder='Nome' />
         <TextInputComponent label="Especialidade" descricao='Insira a especialidade do exame' placeholder='Nome' />
         <TimeInput label="Horário da consulta" />
-        <BotaoCancelarSalvar />
+        <SafeAreaView style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Button textColor='red' onPress={() => navigation.navigate("Consultas")}>cancelar</Button>
+            <Button textColor='#007AFF' onPress={() => { }}>Salvar</Button>
+        </SafeAreaView>
         <View style={{ marginBottom: 100 }} /> 
       </ScrollView>
     </SafeAreaView>

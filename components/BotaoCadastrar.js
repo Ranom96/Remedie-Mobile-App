@@ -1,7 +1,8 @@
 import { Button } from 'react-native-paper';
 import { Text } from 'react-native';
 
-export default function BotaoCadastrar(props) {
+export default function BotaoCadastrar({props, navigation}) {
+    //const irPara = props.irPara;
 
     return (
         <Button
@@ -11,9 +12,9 @@ export default function BotaoCadastrar(props) {
                 position: 'absolute',
                 bottom: 16,
             }}
-            onPress={() => {}}
+            onPress={() => navigation.navigate("ConsultasCadastrar")}
         >
-            <Text style={{ color: 'white', fontSize:24, }}>+</Text>
+            <Text style={{ color: 'white', fontSize: 24, }}>+</Text>
         </Button>
     );
 }

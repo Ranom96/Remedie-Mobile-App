@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { SafeAreaView, Text, ScrollView, View  } from 'react-native'
+import { Button } from 'react-native-paper'
 import Header from '../components/Header'
 import TextInputComponent from '../components/TextInputComponent'
 import BotaoAdicionarImagem from '../components/BotaoAdicionarImagem'
 import TimeInput from '../components/TimeInput'
 import BotaoCancelarSalvar from '../components/BotaoCancelarSalvar'
 
-export default function RemediosCadastrar(props) {
+export default function RemediosCadastrar({props, navigation}) {
   const TextStyle = {
     fontSize: 32,
     textAlign: 'center',
@@ -25,7 +26,10 @@ export default function RemediosCadastrar(props) {
         <TextInputComponent label="Dosagem" descricao='Qual é a dosagem? Ex: 1 dose = 2 capsulas' placeholder='Nome' />
         <BotaoAdicionarImagem/>
         <TimeInput label="Horário do remédio" />
-        <BotaoCancelarSalvar />
+        <SafeAreaView style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Button textColor='red' onPress={() => navigation.navigate("Remédios")}>cancelar</Button>
+            <Button textColor='#007AFF' onPress={() => { }}>Salvar</Button>
+        </SafeAreaView>
         <View style={{ marginBottom: 100 }} /> 
       </ScrollView>
     </SafeAreaView>

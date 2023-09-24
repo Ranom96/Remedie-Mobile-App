@@ -17,7 +17,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import RegisterUser from "../screens/RegisterUser/RegisterUser";
 import ForgotPassword from "../screens/ForgotPassword/ForgotPassword";
-import ExamesCadastrar from "../screens/ExamesCadastrar";
+import ExamesCadastrar from "../screens/examescadastrar";
 
 
 const { Navigator, Screen } = createBottomTabNavigator();

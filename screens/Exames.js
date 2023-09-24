@@ -28,7 +28,7 @@ export default function Exames (props,{navigation}) {
     especialidade2: "Oftalmologista",
     data2: "15/11/2023",
     horario2: "12h45",
-    exame: "Exame de vista"
+    exame: "Exame de vistas"
   
   };
   const botaoStyle = {

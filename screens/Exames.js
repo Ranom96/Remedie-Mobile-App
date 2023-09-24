@@ -6,7 +6,7 @@ import BotaoCadastrar from "../components/BotaoCadastrar";
 import { useState, useEffect } from "react";
 import ExibirExames from "../components/ExibirExames";
 
-export default function Exames (props) {
+export default function Exames (props,{navigation}) {
   const onCadastrar = () => {
     props.onPress();
   };
@@ -31,6 +31,12 @@ export default function Exames (props) {
     exame: "Exame de vista"
   
   };
+  const botaoStyle = {
+    backgroundColor: '#007AFF',
+    borderRadius: 24,
+    position: 'absolute',
+    bottom: 16,
+  }
 
   return (
     <>

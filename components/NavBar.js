@@ -17,7 +17,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import RegisterUser from "../screens/RegisterUser/RegisterUser";
 import ForgotPassword from "../screens/ForgotPassword/ForgotPassword";
-import ExamesCadastrar from "../screens/examescadastrar";
+import ExamesCadastrar from "../screens/ExamesCadastrar";
+
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -79,10 +80,12 @@ export default function NavBar() {
         component={Exames}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <FontAwesomeIcon icon={faStethoscope} size={size} color={color} />
+            <FontAwesomeIcon icon={faNotesMedical} size={size} color={color} />
           ),
         }}
       />
+
+      
       <Screen
         name="Login"
         component={Login}
@@ -120,15 +123,6 @@ export default function NavBar() {
           tabBarStyle: { display: "none" },
         }}
       />
-      <Screen
-        name="RemediosCadastrar"
-        component={RemediosCadastrar}
-        options={{
-          headerShown: false,
-          tabBarItemStyle: { display: "none" },
-          tabBarStyle: { display: "none" },
-        }}
-      />
        <Screen
         name="ExamesCadastrar"
         component={ExamesCadastrar}
@@ -138,6 +132,16 @@ export default function NavBar() {
           tabBarStyle: { display: "none" },
         }}
       />
+      <Screen
+        name="RemediosCadastrar"
+        component={RemediosCadastrar}
+        options={{
+          headerShown: false,
+          tabBarItemStyle: { display: "none" },
+          tabBarStyle: { display: "none" },
+        }}
+      />
+       
     </Navigator>
   );
 }

@@ -51,7 +51,9 @@ export default function Exames (props) {
           dado4={simulacaoBackend.clinica}
           dado5={simulacaoBackend.exame}
         />
-        <BotaoCadastrar />
+        <Button style={botaoStyle} onPress={() => navigation.navigate("ExamesCadastrar")}>
+            <Text style={{ color: 'white', fontSize: 24, paddingTop: 8 }}>+</Text>
+        </Button>
       </SafeAreaView>
     </>
   );

@@ -6,7 +6,7 @@ import BotaoCadastrar from "../components/BotaoCadastrar";
 import { useState, useEffect } from "react";
 import ExibirExames from "../components/ExibirExames";
 
-export default function Exames (props,{navigation}) {
+export default function Exames({ navigation }) {
   const onCadastrar = () => {
     props.onPress();
   };
@@ -28,15 +28,19 @@ export default function Exames (props,{navigation}) {
     especialidade2: "Oftalmologista",
     data2: "15/11/2023",
     horario2: "12h45",
+<<<<<<< HEAD
     exame: "Exame de vistas"
   
+=======
+    exame: "Exame de vista",
+>>>>>>> 2fa7054b24b86b43daa927ae8a6f6c435bb6f2de
   };
   const botaoStyle = {
-    backgroundColor: '#007AFF',
+    backgroundColor: "#007AFF",
     borderRadius: 24,
-    position: 'absolute',
+    position: "absolute",
     bottom: 16,
-  }
+  };
 
   return (
     <>
@@ -57,8 +61,11 @@ export default function Exames (props,{navigation}) {
           dado4={simulacaoBackend.clinica}
           dado5={simulacaoBackend.exame}
         />
-        <Button style={botaoStyle} onPress={() => navigation.navigate("ExamesCadastrar")}>
-            <Text style={{ color: 'white', fontSize: 24, paddingTop: 8 }}>+</Text>
+        <Button
+          style={botaoStyle}
+          onPress={() => navigation.navigate("ExamesCadastrar")}
+        >
+          <Text style={{ color: "white", fontSize: 24, paddingTop: 8 }}>+</Text>
         </Button>
       </SafeAreaView>
     </>

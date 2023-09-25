@@ -7,7 +7,7 @@ import {
   View,
   onPress,
 } from "react-native";
-import CheckBox from "react-native-checkbox";
+import { Checkbox } from "react-native-paper";
 import { Button } from "react-native-paper";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
@@ -57,7 +57,7 @@ export default function ExibirConsultas(props) {
 
   return (
     <SafeAreaView style={exibirStyle}>
-      <CheckBox
+      <Checkbox
         style={checkboxStyle}
         label=""
         checked={isChecked}

@@ -4,7 +4,7 @@ import Consultas from "../screens/Consultas";
 import Exames from "../screens/Exames";
 import Login from "../screens/Login/Login";
 import ConsultasCadastrar from "../screens/ConsultasCadastrar";
-import RemediosCadastrar from '../screens/RemediosCadastrar'
+import RemediosCadastrar from "../screens/RemediosCadastrar";
 
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
@@ -17,8 +17,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import RegisterUser from "../screens/RegisterUser/RegisterUser";
 import ForgotPassword from "../screens/ForgotPassword/ForgotPassword";
-import ExamesCadastrar from "../screens/ExamesCadastrar";
-
+import ExamesCadastrar from "../screens/examescadastrar";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -85,7 +84,6 @@ export default function NavBar() {
         }}
       />
 
-      
       <Screen
         name="Login"
         component={Login}
@@ -123,7 +121,7 @@ export default function NavBar() {
           tabBarStyle: { display: "none" },
         }}
       />
-       <Screen
+      <Screen
         name="ExamesCadastrar"
         component={ExamesCadastrar}
         options={{
@@ -141,7 +139,6 @@ export default function NavBar() {
           tabBarStyle: { display: "none" },
         }}
       />
-       
     </Navigator>
   );
 }

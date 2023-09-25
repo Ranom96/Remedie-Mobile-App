@@ -7,14 +7,14 @@ import {
   View,
   onPress,
 } from "react-native";
-import CheckBox from "react-native-checkbox";
+import { Checkbox } from "react-native-paper";
 import { Button } from "react-native-paper";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function ExibirConsultas(props) {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState("unchecked");
   const [isVisible, setIsVisible] = useState(false);
 
   const dado1 = props.dado1;
@@ -56,13 +56,21 @@ export default function ExibirConsultas(props) {
     setIsVisible(false);
   };
 
+  const handleCheck = () => {
+    if (isChecked == "checked") {
+      setIsChecked("unchecked");
+    } else if (isChecked == "unchecked") {
+      setIsChecked("checked");
+    }
+  };
+
   return (
     <SafeAreaView style={exibirStyle}>
-      <CheckBox
+      <Checkbox
         style={checkboxStyle}
         label=""
-        checked={isChecked}
-        onChange={() => setIsChecked(!isChecked)}
+        status={isChecked}
+        onPress={handleCheck}
       />
       <SafeAreaView style={{ flexDirection: "column" }}>
         <Text style={TextStyle}>{props.dado1}</Text>

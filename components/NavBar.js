@@ -17,7 +17,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import RegisterUser from "../screens/RegisterUser/RegisterUser";
 import ForgotPassword from "../screens/ForgotPassword/ForgotPassword";
-import ExamesCadastrar from "../screens/examescadastrar";
+import ExamesCadastrar from "../screens/ExamesCadastrar";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -47,6 +47,7 @@ export default function NavBar() {
         name="Home"
         component={Home}
         options={{
+          headerShown: true,
           tabBarIcon: ({ size, color }) => (
             <FontAwesomeIcon icon={faHouseMedical} size={size} color={color} />
           ),
